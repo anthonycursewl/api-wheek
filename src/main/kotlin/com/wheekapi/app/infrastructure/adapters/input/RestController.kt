@@ -16,4 +16,9 @@ class HelloControler {
     fun registerUser(): String {
         return "Register user uwu"
     }
+
+    @GetMapping("/arrozito")
+    fun returnArroz(): String {
+        return "Esto es un toque de arroz mi pana wuuwuwuwuw"
+    }
 }
