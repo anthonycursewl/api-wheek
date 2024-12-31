@@ -9,7 +9,7 @@ COPY . /app
 RUN chmod +x ./gradlew
 
 # Build the application
-RUN ./gradlew build
+RUN ./gradlew build --warning-mode all
 
 # Use an official OpenJDK runtime image
 FROM openjdk:11-jre-slim
