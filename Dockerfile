@@ -1,5 +1,5 @@
 # Use an official Gradle image to build the application
-FROM gradle:7.4.2-jdk17 AS build
+FROM gradle:8.11.1-jdk21 AS build
 WORKDIR /app
 
 # Copy the project files
@@ -12,7 +12,7 @@ RUN chmod +x ./gradlew
 RUN ./gradlew build --warning-mode all
 
 # Use an official OpenJDK runtime image
-FROM openjdk:17-jdk-slim
+FROM openjdk:21-jdk-slim
 
 # Copy the built application
 COPY --from=build /app/build/libs/*.jar /app/app.jar
