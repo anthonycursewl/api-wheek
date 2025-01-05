@@ -11,7 +11,7 @@ class HelloControler {
 
     @GetMapping("/login")
     fun littleHello(): String {
-        return dataBaseConfig.getDataBaseConfig("arroz")
+        return dataBaseConfig.getDataBaseConfig()
     }
 
     @GetMapping("/register")
