@@ -11,7 +11,7 @@ class AppApplication
 @Configuration
 class ApplicationConfig(private val env: org.springframework.core.env.Environment) {
 	fun getSecretKey(): String {
-		return env.getProperty("SECRET_KEY") ?: ""
+		return env.getProperty("SECRET_KEY")
 	}
 
 }
